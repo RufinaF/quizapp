@@ -1,0 +1,42 @@
+<div class="modal-body text-center">
+    <h3><strong> Questions</strong></h3>
+</div>
+<div *ngFor="let questions of quizlist">
+<form #questionTest="ngForm" novalidate>
+    
+
+    
+    <ul><b>{{questions.ID}}.  {{questions.question}}</b></ul>
+    <li>
+        <input type="radio" name="{{questions.ID}}" value="optA" [(ngModel)]="questions.selected" >
+        <label>{{questions.optA}}</label>
+    </li>
+    <li>
+        <input type="radio" name="{{questions.ID}}" value="optB" [(ngModel)]="questions.selected" >
+        <label>{{questions.optB}}</label>
+    </li>
+    <li>
+        <input type="radio" name="{{questions.ID}}" value="optC" [(ngModel)]="questions.selected">
+        <label> {{questions.optC}}</label>
+    </li>
+    <li>
+        <input type="radio" name="{{questions.ID}}" value="optD" [(ngModel)]="questions.selected">
+        <label> {{questions.optD}}</label>
+    </li>
+
+    </form>
+
+</div>
+<br>
+<br>
+<div>
+    <button type="button" class="btn btn-primary" (click)="submitTest()">Submit</button>
+</div>
+<div class="modal-body text-center" style="color: #196f77;">
+    <h2>Total Questions: {{quizlist.length}} </h2>
+    
+    </div>
+
+
+  
+    

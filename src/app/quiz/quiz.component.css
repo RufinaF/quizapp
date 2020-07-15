@@ -1,0 +1,17 @@
+ul{
+    list-style: none;
+    text-align: center;
+    
+    display: list-item;
+    list-style-position: inside;
+    
+
+}
+li{
+    list-style: none;
+   display: list-item;
+   text-align: center;
+   padding: 5px;
+   list-style-position: inside;
+   vertical-align: center;
+}
